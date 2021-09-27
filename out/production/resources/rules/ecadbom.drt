@@ -1,0 +1,18 @@
+template header
+
+ecadbomUID
+rule
+
+package com.droolsdemo;
+
+template "ECAD-BOM"
+	rule "@{ecadbomUID}"
+		when
+			$resolve : ResolveBOM(@{rule})
+		then
+			$resolve.setResult();
+	end
+end template
+	
+	
+	

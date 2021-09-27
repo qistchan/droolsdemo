@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'com.droolsdemo.Main'
+
+group 'com.droolsdemo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation  group: 'junit', name: 'junit', version: '4.12'
+    implementation  group: 'org.kie', name: 'kie-api', version: '7.59.0.Final'
+    implementation  group: 'org.drools', name: 'drools-compiler', version: '7.59.0.Final'
+    implementation  group: 'org.drools', name: 'drools-mvel', version: '7.59.0.Final'
+    implementation  group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
+    implementation  group: 'org.drools', name: 'drools-templates', version: '7.59.0.Final'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
